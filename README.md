@@ -1,2 +1,4 @@
 # gpu-inference-platform
 A vLLM-served open-weight LLM running on Kubernetes with real GPU scheduling (NVIDIA GPU Operator, node taints/tolerations) and KEDA-based autoscaling from zero on request-queue depth. Ships with published load-test results across concurrency levels, a measured cold-start latency benchmark, and an int8/int4 quantization cost-vs-quality study. Goal: prove hands-on GPU orchestration and cost-aware LLM serving — not just calling a hosted API
+
+Model Selection: Qwen2.5-7B-Instruct (Apache 2.0). Chosen over Llama-3.1-8B (gated, restrictive community license) and Mistral-7B (equally viable alternative, kept as a fallback for the quantization benchmark in the Eval-Gate project) for its permissive license and mature vLLM support. Fits comfortably on a single 24GB GPU at fp16 without requiring quantization for the baseline deployment.
