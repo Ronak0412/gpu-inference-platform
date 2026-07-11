@@ -1,2 +1,2 @@
 # gpu-inference-platform
-vLLM on Kubernetes with GPU-aware autoscaling from zero
+A vLLM-served open-weight LLM running on Kubernetes with real GPU scheduling (NVIDIA GPU Operator, node taints/tolerations) and KEDA-based autoscaling from zero on request-queue depth. Ships with published load-test results across concurrency levels, a measured cold-start latency benchmark, and an int8/int4 quantization cost-vs-quality study. Goal: prove hands-on GPU orchestration and cost-aware LLM serving — not just calling a hosted API
